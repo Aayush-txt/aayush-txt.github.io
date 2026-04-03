@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aayush Sah | Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f5f7fb;
+      color: #1f2937;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #0f172a;
+      padding: 14px 0;
+      text-align: center;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 14px;
+      font-size: 15px;
+      padding-bottom: 4px;
+      transition: 0.3s;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: #38bdf8;
+      border-bottom: 2px solid #38bdf8;
+    }
+
+    header,
+    section {
+      padding: 100px 20px 70px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      color: white;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      margin-bottom: 12px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      color: #dbeafe;
+      margin-bottom: 22px;
+    }
+
+    .hero-buttons a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-right: 12px;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #38bdf8;
+      color: #0f172a;
+    }
+
+    .btn-primary:hover {
+      background: #0ea5e9;
+      color: #fff;
+    }
+
+    .btn-secondary {
+      border: 1px solid #cbd5e1;
+      color: #fff;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      border-radius: 50%;
+    }
+
+    .hero-image {
+      width: 250px;
+      height: 280px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #334155;
+      border: 6px solid rgba(255, 255, 255, 0.2);
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 18px;
+      text-align: center;
+      color: #0f172a;
+    }
+
+    .section-text {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 17px;
+      color: #475569;
+    }
+
+    .cards,
+    .skills-grid,
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #1d4ed8;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .skills-grid div {
+      background: #fff;
+      padding: 16px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+    }
+
+    .contact-box {
+      max-width: 650px;
+      margin: 30px auto 0;
+      background: #fff;
+      padding: 26px;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    .contact-box p {
+      margin: 10px 0;
+      font-size: 17px;
+    }
+
+    .contact-box a {
+      color: #1d4ed8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      background: #0f172a;
+      color: #fff;
+      padding: 18px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        text-align: center;
+        justify-content: center;
+      }
+
+      .hero-text h1 {
+        font-size: 38px;
+      }
+
+      .hero-buttons a {
+        margin-bottom: 12px;
+      }
+
+      .nav-link {
+        margin: 0 8px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#education" class="nav-link">Education</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </nav>
+
+  <header id="home">
+    <div class="container hero">
+      <div class="hero-text">
+        <h1>Aayush Sah</h1>
+        <p>Simple Portfolio Website using HTML, CSS, and JavaScript</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-primary">My Projects</a>
+          <a href="#contact" class="btn-secondary">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="aayush.jpeg" alt="Aayush Sah">
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p class="section-text">
+        Hello, I’m Aayush Sah. I’m a student and aspiring web developer who enjoys creating clean, simple, and responsive websites. I like working with HTML, CSS, and JavaScript, and I’m always learning new skills to improve my web development journey.
+      </p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Portfolio Website</h3>
+          <p>A personal portfolio website to showcase skills, projects, and contact details.</p>
+        </div>
+        <div class="card">
+          <h3>Landing Page</h3>
+          <p>A responsive landing page with a simple and modern layout using only HTML and CSS.</p>
+        </div>
+        <div class="card">
+          <h3>To-Do App</h3>
+          <p>A small JavaScript app for adding and managing daily tasks efficiently.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="card">
+          <div>HTML</div>
+        </div>
+        <div class="card">
+          <div>CSS</div>
+        </div>
+        <div class="card">
+          <div>JavaScript</div>
+        </div>
+        <div class="card">
+          <div>Responsive Design</div>
+        </div>
+        <div class="card">
+          <div>Git & GitHub</div>
+        </div>
+        <div class="card">
+          <div>Basic UI Design</div>
+        </div>  
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="education-grid">
+        <div class="card">
+          <h3>School / College</h3>
+          <p>Budhanilkantha School / VS niketan College</p>
+        </div>
+        <div class="card">
+          <h3>Course</h3>
+          <p>+2 Computer Science </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact-box">
+        <p>Email: <a href="mailto:godaayush114@gmail.com">godaayush114@gmail.com</a></p>
+        <p>Phone: +977-9708051039</p>
+        <p>Location: Nepal</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Aayush Sah. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll("section, header");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 80;
+        if (pageYOffset >= sectionTop) current = section.getAttribute("id");
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) link.classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
