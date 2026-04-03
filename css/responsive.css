@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-text h1 {
+    font-size: 38px;
+  }
+
+  .hero-buttons a {
+    margin-bottom: 12px;
+  }
+
+  .nav-link {
+    margin: 0 8px;
+    font-size: 14px;
+  }
+}

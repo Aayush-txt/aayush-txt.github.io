@@ -1,0 +1,35 @@
+.cards,
+.skills-grid,
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #1d4ed8;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.skills-grid div {
+  background: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
